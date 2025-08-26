@@ -3,6 +3,7 @@
 import { redirectToVincentConnect, handleVincentAuth } from "./lib/vincent-auth";
 import { useEffect, useState } from "react";
 import { Navbar } from "./components/navbar";
+import Link from "next/link";
 
 export default function HomePage() {
   const [isAuthed, setIsAuthed] = useState(false);
@@ -40,9 +41,27 @@ export default function HomePage() {
               <h2 className="text-2xl font-semibold text-gray-900 mb-4">
                 Welcome! You're authenticated.
               </h2>
-              <p className="text-gray-600">
+              <p className="text-gray-600 mb-6">
                 You can now build your app with Vincent authentication.
               </p>
+              
+              <div className="space-y-4">
+                <Link
+                  href="/api-test"
+                  className="inline-block bg-blue-600 hover:bg-blue-700 text-white font-medium py-3 px-6 rounded-lg transition-colors"
+                >
+                  Test API Endpoints
+                </Link>
+                
+                <div className="text-sm text-gray-500">
+                  <p>Available routes:</p>
+                  <ul className="mt-2 space-y-1">
+                    <li>• <code className="bg-gray-100 px-2 py-1 rounded">/api/hello</code> - Simple API endpoint</li>
+                    <li>• <code className="bg-gray-100 px-2 py-1 rounded">/api-test</code> - API testing page</li>
+                    <li>• <code className="bg-gray-100 px-2 py-1 rounded">/login</code> - Auth callback</li>
+                  </ul>
+                </div>
+              </div>
             </div>
           ) : (
             <div className="bg-white rounded-lg shadow-sm p-8">
