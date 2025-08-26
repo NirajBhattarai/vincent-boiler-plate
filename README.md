@@ -167,7 +167,7 @@ npm start
 
 ## 📚 Additional Resources
 
-- [Vincent Documentation](https://docs.litprotocol.com/vincent)
+- [Vincent Documentation](https://docs.heyvincent.ai/documents/Getting_Started.html)
 - [Next.js Documentation](https://nextjs.org/docs)
 - [Tailwind CSS Documentation](https://tailwindcss.com/docs)
 - [Lit Protocol](https://litprotocol.com/)
